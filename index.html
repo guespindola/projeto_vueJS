@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-do List with VueJS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main id="app">
+        <header class="cabecalho">
+            <h2 class="cabecalhoitem" >Lista de Tarefas com VlueJS</h2>
+            <form>
+                <input class="cabecalhoitem" id="escrever" type="text" v-model="currentTodo" placeholder="Digite sua tarefa..." maxlength="500">
+                <button class="cabecalhoitem" id="adicionar" @click.prevent="addTodo">+</button>
+            </form>
+
+        </header>
+        <section class="corpo">
+            <ol>
+                <li v-for="todo in filteredTodos" :key="todo.text" @click="toggleTodo(todo)">
+                    <div  class="lista">
+                        <input type="checkbox" v-bind:checked="todo.done">
+                        <label>
+                            <del v-if="todo.done">
+                                {{ todo.text }}
+                            </del>
+                            <span v-else>
+                                {{ todo.text }}
+                            </span>
+                        </label>
+                    </div>
+                    <img class="botaox" src="icons8-close-32.png" @click="delTodo(todo)" alt="fechar">
+                </li>
+            </ol>
+        </section>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="todo.js"></script>
+</body>
+
+</html>

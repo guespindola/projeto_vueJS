@@ -1,0 +1,85 @@
+root * {
+    padding: 0;
+    margin: auto;
+
+}
+
+#app {
+    background-color: aquamarine;
+    margin: 1em auto;  	
+	width: 650px;  	
+	background: #fff; 
+    
+
+}
+
+.cabecalhoitem {
+    margin-left: 20px;
+}
+
+input {
+    background-color:rgb(13, 103, 126) ;
+    color: black;
+    text-align: center;
+    border-radius: 20px;
+    border-color: rgb(13, 103, 126);
+    padding: 5px;
+
+}
+
+#adicionar {
+    border-radius: 10px;
+    padding: 5px;
+    background-color: rgb(13, 103, 126) ;
+    border-color: rgb(13, 103, 126) ;
+    transition: 0.3s;
+}
+
+#adicionar:hover {
+    transition: 0.3s;
+   background-color: rgb(22, 184, 224) ;
+}
+
+.cabecalho {
+    background-color: rgb(22, 184, 224);
+    border-radius: 15px 15px 0 0 ;
+    padding: 10px 10px 10px 10px;
+}
+
+.corpo {
+    background-color: rgb(13, 103, 126);
+    border-radius: 0 0 15px 15px;
+    padding: 10px;
+
+}
+
+
+ol,ul {
+    padding: 0;
+    list-style: none;
+    
+}
+
+li {
+    transition: 0.3;
+    background-color: rgb(22, 184, 224) ;
+    padding: 7px;
+    margin: 10px;
+    border-radius: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+li:hover {
+    transition: 0.3;
+    background-color: rgb(13, 103, 126) ;
+}
+
+.botaox {
+    margin-top: 5px;
+}
+
+
+
+
+
